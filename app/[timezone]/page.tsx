@@ -53,16 +53,7 @@ export default async function Page({ params: { timezone } }) {
         </Suspense>
         <RevalidateFrom />
       </main>
-      <footer className="footer">
-        <Link
-          href={process.env.NEXT_PUBLIC_REDIS_INSIGHT_URL}
-          className="link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View RedisInsight &#x21AA;
-        </Link>
-      </footer>
+      <footer className="footer"></footer>
     </>
   );
 }
