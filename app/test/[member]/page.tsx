@@ -3,7 +3,7 @@ import { fromContainerMetadata } from "@aws-sdk/credential-providers";
 
 export async function generateStaticParams() {
   const dynamo = new DynamoDBClient({
-    region: "us-east-2",
+    region: "us-west-2",
     credentials: fromContainerMetadata(),
   });
   const cmd = new ScanCommand({ TableName: "build" });
