@@ -1,8 +1,8 @@
 import { CacheHandler } from "@neshca/cache-handler";
 import createLruHandler from "@neshca/cache-handler/local-lru";
-// import createRedisHandler from "@neshca/cache-handler/redis-stack";
+import createRedisHandler from "@neshca/cache-handler/redis-stack";
 // or if you are using Redis without the RedisJSON module
-import createRedisHandler from "@neshca/cache-handler/redis-strings";
+// import createRedisHandler from "@neshca/cache-handler/redis-strings";
 import { createClient } from "redis";
 
 CacheHandler.onCreation(async () => {
@@ -17,7 +17,7 @@ CacheHandler.onCreation(async () => {
 
   await client.connect();
 
-  const redisHandler = createRedisHandler({
+  const redisHandler = await createRedisHandler({
     client,
     // timeout for the Redis client operations like `get` and `set`
     // after this timeout, the operation will be considered failed and the `localHandler` will be used
