@@ -6,7 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@neshca/cache-handler": "^1.3.0",
+    "@neshca/cache-handler": "^1.3.2",
     "next": "^14",
     "redis": "latest",
     "react": "^18.2.0",
