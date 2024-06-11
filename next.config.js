@@ -8,4 +8,6 @@ const nextConfig = {
   },
 };
 
+console.log("NEXT_PRIVATE_DEBUG_CACHE", process.env.NEXT_PRIVATE_DEBUG_CACHE);
+
 module.exports = nextConfig;
